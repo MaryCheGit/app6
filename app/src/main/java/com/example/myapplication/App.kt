@@ -4,8 +4,6 @@ import android.app.Application
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.os.Build
-import com.example.myapplication.Constants.Companion.channelID
-import com.example.myapplication.Constants.Companion.notificationChannelName
 
 class App : Application() {
 
@@ -17,8 +15,8 @@ class App : Application() {
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val serviceChannel = NotificationChannel(
-                channelID,
-                notificationChannelName,
+                Constants.channelID,
+                Constants.notificationChannelName,
                 NotificationManager.IMPORTANCE_DEFAULT
             )
 
